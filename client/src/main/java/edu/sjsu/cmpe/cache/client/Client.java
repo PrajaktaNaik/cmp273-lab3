@@ -33,7 +33,7 @@ System.out.println(" ");
  //GET data from Cache servers consistent hashing
 System.out.println("GET data from Cache... ");
 
-for(int key=1;key<input.length-1;key++){
+for(int key=1;key<=input.length-1;key++){
  int keyvalue=Hashing.consistentHash(Hashing.md5().hashString(Integer.toString(key)), totalServers.size());
  CacheServiceInterface serverToGetData =totalServers.get(keyvalue);
  String value = serverToGetData.get(key);
